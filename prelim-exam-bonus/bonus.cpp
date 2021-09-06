@@ -10,34 +10,41 @@
 #include <string>
 using namespace std; 
 
+// function to check if d is found in n
 bool contains_digit(int n, int d) {
     bool hasDigit;
+    // convert values to string 
     string str_n = to_string(n);
     string str_d = to_string(d);
+    // find the value of str_d if present in str_n
     size_t found = str_n.find(str_d);
 
-    if (found != string::npos) {
+    // found will be the value of constant npos when find fails
+    // Otherwise its a successful match
+    if (found != string::npos) { 
         hasDigit = true;
     } else {
         hasDigit = false; 
     }
 
-    return hasDigit;
+    return hasDigit; // return value (true/ false)
 }
 
 int main() {
-    int T; 
-    int n,d;
-    size_t found;
+    int T; // number of test cases 
+    int n,d; // t-lines 
+    size_t found; 
 
     cin >> T; 
+    // loop to get T inputs of t-lines
     for (int i = 1; i <= T; i++) {
         cin >> n >> d; 
+        // found will get the value of the called function
         found = contains_digit(n, d); 
         if (found) {
             cout << "CASE " << i << ": FOUND" << endl; 
         } else {
-             cout << "CASE " << i << ": NOT FOUND" << endl; 
+            cout << "CASE " << i << ": NOT FOUND" << endl; 
         }
     }
 
