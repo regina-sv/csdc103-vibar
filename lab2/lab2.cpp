@@ -217,6 +217,7 @@ int main () {
     int B[] = {111, 90, 1301, 137, 90};
     int C[] = {35, 98, 99, 101, 777, 137};
     int D[] = {22, 34, 189, 199};
+    int E[] = {};
     
     // Function calls: 
 
@@ -225,11 +226,11 @@ int main () {
     cout << count_vowels("AntholOgy") << endl; // Prints "3" 
     cout << count_vowels("AAAaaaEEEeeeIIIiiiOOOoooUUUAeIoU") << endl; // Prints "32" 
     cout << count_vowels("gypsySky") << endl; // Prints "0" 
-    cout << count_vowels("tenkEyless") << endl; // Prints "3" 
+    cout << count_vowels(" ") << endl; // Prints "0" 
 
     cout << endl << "binary_to_decimal(b) sample cases: " << endl;
     cout << binary_to_decimal(10110) << endl; // Prints "22"
-    cout << binary_to_decimal(10001000) << endl; // Prints "136"
+    cout << binary_to_decimal(0) << endl; // Prints "0"
     cout << binary_to_decimal(101100) << endl; // Prints "44"
     cout << binary_to_decimal(1) << endl; // Prints "1"
     cout << binary_to_decimal(111000111) << endl; // Prints "455"
@@ -238,7 +239,7 @@ int main () {
     cout << search(A, 5, 90) << endl; // Prints "0"
     cout << search(B, 5, 90) << endl; // Prints "1"
     cout << search(C, 6, 137) << endl; // Prints "5"
-    cout << search(B, 4, 1301) << endl; // Prints "2"
+    cout << search(E, 0, 10) << endl; // Prints "2"
     cout << search(A, 3, 1002) << endl; // Prints "-1
 
     cout << endl << "search_sorted(A, n, x) sample cases: " << endl;
@@ -246,7 +247,7 @@ int main () {
     cout << search_sorted(C, 6, 101) << endl; // Prints "3"
     cout << search_sorted(C, 3, 35) << endl; // Prints "0"
     cout << search_sorted(D, 4, 101) << endl; // Prints "-1" 
-    cout << search_sorted(D, 4, 189) << endl; // Prints "2"   
+    cout << search_sorted(E, 0, 1) << endl; // Prints "2"   
 
     return 0;
 }
